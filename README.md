@@ -26,3 +26,10 @@ cmake ..
 make
 
 ```
+
+
+### USAGE
+```
+run in terminal:
+./test_image <image_ppm_format_path>
+```

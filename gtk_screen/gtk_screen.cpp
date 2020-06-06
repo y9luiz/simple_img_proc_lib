@@ -14,7 +14,9 @@ void  img_proc::imshow(Img img){
   
     GError *error =NULL;
     GtkWidget *window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file("lena_p3_copy_.ppm",&error);//gdk_pixbuf_new_from_data(data,  GdkColorspace(0),false,8,width,height,width*3,NULL,NULL);
+ 	
+    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_data(data,  GdkColorspace(0),false,8,width,height,width*3,NULL,NULL);
+
     if(pixbuf == NULL){
         cout<<"dammit\n";
         fprintf(stderr, "Loading image 2 failed with error %s\n", error->message);    

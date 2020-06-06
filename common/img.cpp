@@ -15,7 +15,7 @@ img_proc::Img::Img(int width, int height,img_proc::colorSpaceCode code,unsigned 
     this->channels = code;
     
     this->data = new unsigned char [width*height*channels];
-    memcpy(this->data,data,width*height*channels);
+    memcpy(this->data,data+1,width*height*channels);
 
     
 }
